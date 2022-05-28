@@ -1,0 +1,108 @@
+brijesh@brijesh-GF75-Thin-9SCSR:~/Documents/ai/ai-assign02$ swipl
+Welcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- consult('u19cs009-ai-assign01-family-tree.pl').
+true.
+
+?- %Is Albert a parent of Peter?
+|    parent('albert','peter').
+true .
+
+?- %Who is the child of Jim?
+|    parent('jim',X).
+X = brian.
+
+?- %Who are the parents of Brian?
+|    findall(X,parent(X,'brian'),B).
+B = [jim, pat].
+
+?- %Parents of brian are : jim and pat.
+|    true.
+true.
+
+?- %Is Irene a grandparent of Brian?
+|    parent('irene',X),parent(X,'brian').
+X = jim .
+
+?- %Here X has a value,Jim, so it means Irene is grandparent of Brian.
+|    true
+|    .
+true.
+
+?- %Find all the grandchildren of Irene.
+|    findall(Y,(parent('irene',X),parent(X,Y)),B).
+B = [brian, lee, sandra, james, kate, kyle].
+
+?- %Here all memebers of B are grandchildren of irene.
+|    true.
+true.
+
+?- consult('u19cs009-ai-assign01-family-tree.pl').
+true.
+
+?- %Who is older than Pat?
+|    findall(X,older(X,'pat'),B).
+B = [irene, albert, jim, peter].
+
+?- %Here members of B are older than pat.
+|    true.
+true.
+
+?- %Who is younger than Darren?
+|    findall(X,older('darren',X),B).
+B = [jenny, amanda].
+
+?- %Here all the members of B are younger than darren.
+|    true.
+true.
+
+?- %List the siblings of Sandra.
+|    findall(Y,(parent(X,'sandra'),parent(X,Y)),B).
+B = [lee, sandra, james, kate, kyle].
+
+?- %Here all the members of B are siblings of sandra.
+|    true.
+true.
+
+?- %Who is the older brother of Sandra?
+|    findall(Y,(parent(X,'sandra'),parent(X,Y),older(Y,'sandra'),male(Y)),B).
+B = [james].
+
+?- %Here James is the brother of sandra who is older than her.
+|    true.
+true.
+
+?- %Find the predecessors of Kyle.
+|    findall(X,predecessor(X,'kyle'),B).
+B = [peter, albert, irene].
+
+?- %Predecessor of Kyle are listed in B.
+|    true.
+true.
+
+?- %Does Kate have a sister?
+|    findall(Y,(parent(X,'kate'),parent(X,Y),female(Y),Y\=='kate'),B).
+B = [lee, sandra].
+
+?- %Kate's sisters are : Lee and Sandra.
+|    true.
+true.
+
+?- %How many females and males are there in the knowledge base?
+|    %Number of males are :
+|    countMales(X).
+X = 8.
+
+?- %How many females and males are there in the knowledge base?
+|    %Number of females are :
+|    countFemales(X).
+X = 7.
+
+?- ^C
+Action (h for help) ? exit (status 4)
+brijesh@brijesh-GF75-Thin-9SCSR:~/Documents/ai/ai-assign02$ 

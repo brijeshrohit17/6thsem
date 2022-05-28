@@ -1,0 +1,14 @@
+//U19CS009
+//Brijesh Rohit
+
+#include<stdio.h>
+
+int main()
+{
+	printf("Hello World!");
+    printf("\n");
+    int a = 10;
+    float b = 1.2;
+    char name[] = {'b','r','i'.'j','e','s','h','\0'};
+	return 0;
+}

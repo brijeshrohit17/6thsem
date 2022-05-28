@@ -1,0 +1,7 @@
+aabcd : Accepted
+aadftvsge4vsgvbcd : Declined
+assacfabg : Declined
+aadfvhrb : Declined
+dgsvtsbcd : Declined
+aabcdbcdbcdbcd : Accepted
+aaaaaaaabcd : Accepted

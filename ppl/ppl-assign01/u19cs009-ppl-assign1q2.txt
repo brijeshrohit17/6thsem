@@ -1,0 +1,29 @@
+2.Find errors, if any, in the following C++ statements.
+
+a) long float x;
+b) char *cp = vp; // vp is a void pointer
+c) int code = three; // three is an enumerator
+d) int sp = new; // allocate memory with new
+e) enum (green, yellow, red);
+f) int const sp = total;
+g) const int array_size;
+h) for (i=1; int i<10; i++) cout << i << “/n”;
+i) int & number = 100;
+j) float *p = new int 1101;
+k) int public = 1000;
+l) char name[33] = “USA”;
+
+Ans : 
+a. Error: long float is not a data type.
+b. Error: void pointer cannot be assigned to a char pointer.
+c. Success: Code will have the value of the key assigned to three in
+the enum.
+d. Error: Type specifier not mentioned.
+e. Error: Syntax is invalid ‘{}’ should be used instead of ‘()’.
+f. Success: sp would be assigned the value which ‘total’ holds.
+g. Error: Value must be assigned when const is used.
+h. Error: Declaration must be done like for(int a=1 ;a<10 ;a++ ).
+i. Error: References must be assigned by a variable not constant.
+j. Error: Invalid data specifier.
+k. Error: Invalid identifier (public is a access modifier)
+l. Success: name is a string with size 3 storing “USA”.

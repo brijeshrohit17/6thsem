@@ -1,0 +1,3 @@
+--2022-01-26 23:35:11--  http://fly.srk.fer.hr/
+Resolving fly.srk.fer.hr (fly.srk.fer.hr)... failed: Name or service not known.
+wget: unable to resolve host address ‘fly.srk.fer.hr’

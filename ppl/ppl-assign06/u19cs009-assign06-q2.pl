@@ -1,0 +1,4 @@
+%U19CS009
+%BRIJESH ROHIT
+
+a(B,B).

@@ -1,0 +1,10 @@
+int main()
+{
+    int a=70,b=77;
+    int sum=a+b;
+    sum+=66;
+    char c='f';
+    char str[5]="hello"; //Comment here
+    printf("%s,%c,%d",str,c,sum); 
+    return 0;
+}

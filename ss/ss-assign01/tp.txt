@@ -1,0 +1,1 @@
+Hi! This is sample added to file in c!
